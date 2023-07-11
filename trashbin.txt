@@ -1,3 +1,5 @@
+createApp(App).mount('#app')
+ 
 import router from './router'
  
 import from '@/App.vue';
