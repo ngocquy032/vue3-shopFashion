@@ -3,11 +3,23 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1689072697079,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1689073508626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { createApp } from 'vue'\n import App from './App.vue'\n+import router from './router'\n \n \n-createApp(App).mount('#app')\n+createApp(App, router).mount('#app')\n"
+                },
+                {
+                    "date": 1689073729496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+import { createApp } from 'vue'\n+import App from './App.vue'\n+import router from './router'\n+\n+\n+createApp(App).mount('#app')\n"
+                },
+                {
+                    "date": 1689073781576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,7 @@\n import { createApp } from 'vue'\n import App from './App.vue'\n import router from './router'\n \n-\n-createApp(App).mount('#app')\n-import { createApp } from 'vue'\n-import App from './App.vue'\n-import router from './router'\n-\n-\n-createApp(App, router).mount('#app')\n+const app = createApp(App)\n+app.use(router)\n+app.mount('#app')\n"
                 }
             ],
             "date": 1689072697079,
