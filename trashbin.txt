@@ -1,0 +1,12 @@
+import router from './router'
+ 
+import from '@/App.vue';
+ 
+component: AppHome import 
+ 
+import AppHome from '../'
+ 
+  <AppHome></AppHome>
+ 
+import Header from '../components/Header.vue'
+ 

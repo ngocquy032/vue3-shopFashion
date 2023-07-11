@@ -39,7 +39,7 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limita CSS to this componenasdast only -->
+<!-- Add "scoped" attribute to limita CSS to this componenat only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;

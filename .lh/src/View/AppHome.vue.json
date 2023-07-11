@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/View/AppHome.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1689072151633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1689072268149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+<template>\r\n+    <div>\r\n+      <AppHeader></AppHeader>\r\n+       \r\n+    </div>\r\n+</template>\r\n+\r\n+<script setup >\r\n+import AppHeader from '../components/AppHeader.vue'\r\n+\r\n+\r\n+\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1689072304992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+<template>\r\n+    <div>\r\n+      <AppHeader></AppHeader>\r\n+       \r\n+    </div>\r\n+</template>\r\n+\r\n+<script setup >\r\n+import AppHeader from '../components/AppHeader.vue'\r\n+\r\n+\r\n+\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1689072151633,
+            "name": "Commit-0",
+            "content": "<template>\r\n    <div>\r\n       <Header></Header>\r\n    </div>\r\n</template>\r\n\r\n<script setup >\r\nimport Header from '../components/Header.vue'\r\n\r\n</script>\r\n\r\n<style scoped>\r\n\r\n</style>"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "trashbin.txt",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1689072303988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1689072542674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import from '@/App.vue';\r\n+ \r\n+component: AppHome import \r\n+ \r\n+import AppHome from '../'\r\n+ \r\n+  <AppHome></AppHome>\r\n+ \r\n+import Header from '../components/Header.vue'\r\n+ \r\n"
+                },
+                {
+                    "date": 1689072914564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import router from './router'\r\n+ \r\n import from '@/App.vue';\r\n  \r\n component: AppHome import \r\n  \r\n@@ -7,10 +9,4 @@\n   <AppHome></AppHome>\r\n  \r\n import Header from '../components/Header.vue'\r\n  \r\n-import AppHome from '../'\r\n- \r\n-  <AppHome></AppHome>\r\n- \r\n-import Header from '../components/Header.vue'\r\n- \r\n"
+                }
+            ],
+            "date": 1689072303988,
+            "name": "Commit-0",
+            "content": "import AppHome from '../'\r\n \r\n  <AppHome></AppHome>\r\n \r\nimport Header from '../components/Header.vue'\r\n \r\n"
+        }
+    ]
+}
