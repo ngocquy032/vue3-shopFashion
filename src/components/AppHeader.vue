@@ -4,7 +4,10 @@
             <img src="../assets/images/logo.png" alt="" width="8%">
             <div id="menu">
                 <div class="item">
-                    <a class="item_bottom" href="#">HOME</a>
+                   
+                    <div class="item_bottom">
+                        <router-link to="/">Home</router-link>
+                    </div>
                 </div>
                 <div class="item item_menu">
                     <a href="#">MENU</a>
@@ -21,16 +24,16 @@
                     </div>
                 </div>
                 <div class="item">
-                    <a href="./men.html">MEN</a>
+                   <router-link to="/showProduct">MEN</router-link>
                 </div>
                 <div class="item">
-                    <a href="./nu.html">WOMEN</a>
+                    <router-link to="/cartProduct" >WOMAN</router-link>
                 </div>
                 <div class="item">
-                    <a href="about-us.html">ABOUT US</a>
+                    <router-link to="/aboutUs">ABOUT US</router-link>
                 </div>
                 <div class="item">
-                    <a href="./customer-support.html">CUSTOMER SUPPORT</a>
+                    <router-link to="/contacUs">CUSTOMER SUPPORT</router-link>
                 </div>
             </div>
             <form action id="search">
@@ -56,6 +59,10 @@
 </template>
 
 <script setup>
+// import { useRouter } from 'vue-router';
+// const router = useRouter();
+
+
 
 </script>
 
@@ -71,6 +78,7 @@
     width: 100%;
     height: 80px;
 }
+
 
 #header {
     width: 100%;

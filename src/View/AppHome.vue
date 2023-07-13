@@ -23,18 +23,20 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    <ProductHome></ProductHome>
+
+    <AppFooter></AppFooter>
 
   </div>
 </template>
 
-<script setup >
+<script setup>
+import ProductHome from '@/components/ProductHome.vue';
 import AppHeader from '../components/AppHeader.vue'
-
-
+import AppFooter from '@/components/AppFooter.vue';
 
 </script>
-
 <style scoped>
 
-
 </style>
+
