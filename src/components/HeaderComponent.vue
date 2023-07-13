@@ -1,12 +1,14 @@
 <template>
     <div id="wrapper">
         <div id="header">
-            <img src="../assets/images/logo.png" alt="" width="8%">
+           
+                <img class="with-8" src="../assets/images/logo.png" alt="" >
+            
             <div id="menu">
                 <div class="item">
                    
                     <div class="item_bottom">
-                        <router-link to="/">Home</router-link>
+                        <router-link to="/">HOME</router-link>
                     </div>
                 </div>
                 <div class="item item_menu">
@@ -24,10 +26,10 @@
                     </div>
                 </div>
                 <div class="item">
-                   <router-link to="/showProduct">MEN</router-link>
+                   <router-link to="/men">MEN</router-link>
                 </div>
                 <div class="item">
-                    <router-link to="/cartProduct" >WOMAN</router-link>
+                    <router-link to="/woman" >WOMAN</router-link>
                 </div>
                 <div class="item">
                     <router-link to="/aboutUs">ABOUT US</router-link>
@@ -67,6 +69,11 @@
 </script>
 
 <style  scoped>
+ .with-8{
+    width: 8%;
+ }
+
+
 * {
     font-family: Arial, Helvetica, sans-serif, ;
     box-sizing: border-box;
@@ -132,9 +139,9 @@
     text-align: left;
 }
 
-.item_bottom {
+/* .item_bottom {
     border-bottom: #ff720b solid 3px;
-}
+} */
 
 #menu>.item>.item_bottom {
     color: #ff720b;

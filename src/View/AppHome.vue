@@ -1,7 +1,5 @@
 <template>
   <div>
-    <AppHeader></AppHeader>
-
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="2000">
@@ -24,16 +22,11 @@
       </button>
     </div>
     <ProductHome></ProductHome>
-
-    <AppFooter></AppFooter>
-
   </div>
 </template>
 
 <script setup>
 import ProductHome from '@/components/ProductHome.vue';
-import AppHeader from '../components/AppHeader.vue'
-import AppFooter from '@/components/AppFooter.vue';
 
 </script>
 <style scoped>

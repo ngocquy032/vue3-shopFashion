@@ -1,16 +1,14 @@
 <template>
     <div>
-        <div v-for="brandProducts in productsData.type" :key="brandProducts">
+        <div v-for="(brandProducts, type) in productsData" :key="brandProducts">
             <div id="box_title">
                 <label>{{ brandProducts[0].brand }}</label>
             </div>
-            
 
             <div id="card">
                 <div class="card_style_1" style="width: 24%;" v-for="product in brandProducts" :key="product.id">
                     <button @click="goToProduct(product.id, type)">
-                            <img :src="`/assets/images/${ product.image}`" class="card-img-top" :alt="product.name" />
-
+                        <img :src="`/assets/images/${ product.image}`" class="card-img-top" :alt="product.name" />
                         <div class="card-body">
                             <p class="card-text">{{ product.name }}</p>
                             <div class="star">
@@ -23,12 +21,8 @@
                             <div class="product-price"><bdi>{{ product.price }}&nbsp;<span
                                         class="woocommerce-Price-currencySymbol">₫</span></bdi>
                             </div>
-
                         </div>
-
                     </button>
-
-
                 </div>
             </div>
         </div>
@@ -36,10 +30,16 @@
 </template>
 <script setup>
 
-import { useRouter } from 'vue-router'
-const router = useRouter();
-import productsData from '../store/product.json';
-import ShowProduct from '@/View/ShowProduct.vue';
+// import { useRouter } from 'vue-router'
+// const router = useRouter();
+import productsDatas from '../store/product.json';
+const productsData = {
+    newArrival: productsDatas.newArrival,
+    homeBurberry: productsDatas.HomeBurberry,
+    homeGucci:  productsDatas.HomeGucci
+
+}
+// import ShowProduct from '@/View/ShowProduct.vue';
 
 
 // const goToProduct = (id, typeProduct) => {
@@ -49,11 +49,11 @@ import ShowProduct from '@/View/ShowProduct.vue';
 //     });
 
 // }
-const goToProduct = ()=>{
-    router.push({
-        name: ShowProduct
-    })
-}
+// const goToProduct = () => {
+//     router.push({
+//         name: ShowProduct
+//     })
+// }
 </script>
 
 <style  scoped>
