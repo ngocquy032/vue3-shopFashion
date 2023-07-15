@@ -15,9 +15,11 @@
             </div>
         </div>
     </div>
+    <ProductMen></ProductMen>
 </template>
 
 <script setup>
+import ProductMen from '../Product/ProductMen.vue'
 
 </script>
 

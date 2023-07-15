@@ -5,20 +5,25 @@
                 MEMBERS OF OUR TEAM
             </h2>
         </div>
-        <div class="about-2" >
+        <div class="about-2" v-for="member in ProductData" :key="member.id">
             <div class="d-flex">
                 <div class="w-30">
                     <div class="pd-15">
                         <img src="../assets/images/about-us-1.jpg" alt="">
                     </div>
                 </div>
-                <div class="w-70" v-for="member in ProductData" :key="member.id" ></div>
+                <div class="w-70" >
                     <div class="name">
                         <h2> {{ member.name }} </h2>
                         <p> {{ member.job }}  </p>
                     </div>
                     <div class="conten-1">
                         <p>
+                            {{ member.conten1 }}
+                            {{ member.conten2 }}
+
+                            {{ member.conten3 }}
+
                             
                         </p>
                     </div>
@@ -29,7 +34,9 @@
 </template>
 
 <script setup>
-import ProductData from '../store/production.js'
+import ProductDatas from '../store/product.json'
+const ProductData = ProductDatas.member;
+
 
 
 </script>

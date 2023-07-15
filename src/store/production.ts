@@ -10,8 +10,8 @@ const getProduct = () => {
 }
 
 // const getProductById = async(id: string) => {
-//     // const res = await getProductService();
-//     // if(res) product.value = res.data
+//     const res = await getProductService();
+//     if(res) product.value = res.data
 // }
 
 export {
