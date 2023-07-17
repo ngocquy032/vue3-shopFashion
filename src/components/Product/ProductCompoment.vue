@@ -29,14 +29,18 @@
     </div>
 </template>
 <script setup>
-
 // import { useRouter } from 'vue-router'
 // const router = useRouter();
-import productsDatas from '../store/product.json';
-const productsData = {
-    newArrival: productsDatas.menBuberry,
-    homeBurberry: productsDatas.menGucci,
-}
+
+// eslint-disable-next-line no-undef
+const props = defineProps({
+    productsData: {
+        type: Array,
+        // eslint-disable-next-line vue/require-valid-default-prop
+        default: []
+    }
+});
+
 
 </script>
 

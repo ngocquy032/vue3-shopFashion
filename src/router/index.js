@@ -7,14 +7,15 @@ import ContacUs from '@/View/ContacUs.vue';
 import MainLayout from "@/layouts/MainLayout.vue";
 import MenProduct from "@/View/MenProduct.vue";
 import WomanProduct from "@/View/WomanProduct.vue";
+import LoginViewVue from '@/View/LoginView.vue';
 // import LoginLayout from "@/layouts/LoginLayout.vue";
 
 
 const routes = [
   {
-      path: '/',
-      component: MainLayout,
-      children: [
+    path: '/',
+    component: MainLayout,
+    children: [
       {
         path: '/',
         component: AppHome
@@ -43,19 +44,16 @@ const routes = [
       {
         path: '/contacUs',
         component: ContacUs
-      },  
-      ]
+      },
+
+    ],
+  
   },
-  // {
-  //   path: '/',
-  //   component: LoginLayout,
-  //   children: [
-  //     {
-  //       path: '/login',
-  //       component: AppHome
-  //     },  
-  //   ]
-  // },
+  {
+    path: '/login',
+    component: LoginViewVue
+  }
+
 ];
 
 const router = createRouter({

@@ -15,11 +15,19 @@
             </div>
         </div>
     </div>
-    <ProductMen></ProductMen>
+    <!-- <ProductMen></ProductMen> -->
+    <ProductBlock :productsData="productsData" />
 </template>
 
 <script setup>
-import ProductMen from '../Product/ProductMen.vue'
+// import ProductMen from '../Product/ProductMen.vue'
+import { ref } from "vue"
+import ProductBlock from "../components/Product/ProductCompoment.vue"
+import productsDatas from '../store/product.json';
+const productsData = ref({
+    newArrival: productsDatas.menBuberry,
+    homeBurberry: productsDatas.menGucci,
+})
 
 </script>
 

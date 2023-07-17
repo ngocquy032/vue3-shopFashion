@@ -10,9 +10,10 @@
                             <div class="text-name">
                                 <i class="fa fa-user"></i> Full Name
                             </div>
-                            <input type="text" img class="form-control" id="name" placeholder="NAME" onblur="checkName()"
-                                required />
-                            <div id="checkName"></div>
+                            <input type="text" v-model="fullName" img class="form-control" placeholder="NAME" />
+                            <div>
+                                <p class="color-p"> {{ messageName }}</p>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -20,9 +21,10 @@
                             <div class="text-name">
                                 <i class="fa fa-envelope"></i> Email
                             </div>
-                            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email"
-                                onblur="checkMail()" required>
-                            <div id="checkEmail"></div>
+                            <input type="email" v-model="email" class="form-control" id="email" placeholder="EMAIL">
+                            <div>
+                                <p class="color-p"> {{ messagerEmail }}</p>
+                            </div>
                         </div>
                     </div>
 
@@ -30,24 +32,27 @@
                         <div class="col-sm-12">
                             <div class="text-name">
                                 <i class="fa fa-phone"></i> Number Phone
-
                             </div>
-                            <input type="text" class="form-control" id="phone" placeholder="Number Phone" name="phone"
-                                onblur="checkPhone()" required>
-                            <div id="checkPhone"></div>
+                            <input type="text" v-model="phone" class="form-control" placeholder="Number Phone" name="phone">
+                            <div>
+                                <p class="color-p"> {{ messagerPhone }}</p>
+                            </div>
                         </div>
                     </div>
                     <div class="text-name">
                         <i class="fa fa-commenting"></i> Messager
                     </div>
-                    <textarea class="form-control" rows="10" id="textarea" placeholder="MESSAGE" name="message"
-                        onblur="checkTextarea()" required></textarea>
-                    <div id="checkTextarea"></div>
-                    <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND"
-                        onclick="onClickBtnSend()">
-                        <div class="alt-send-button">
+                    <textarea class="form-control" rows="10" v-model="message" placeholder="MESSAGE"
+                        name="message"></textarea>
+
+                    <div>
+                        <p class="color-p"> {{ messagerMSG }}</p>
+                    </div>
+                    <button class="btn btn-primary send-button" type="button" @click="submit">
+                        <!-- <div class="alt-send-button">
                             <span class="send-text">SEND</span>
-                        </div>
+                        </div> -->
+                        SEND
                     </button>
                 </form>
                 <div class="direct-contact-container">
@@ -108,15 +113,98 @@
 </template>
 
 <script setup>
+import { checkName, fullName } from '@/service/checkSubmit.ts';
+import { ref } from 'vue';
 import MapComponent from '@/components/MapComponent.vue';
+// const fullName = ref('');
+const email = ref<String>('');
+const phone = ref<Number>(null);
+const message = ref('');
+const messageName = ref('');
+const messagerEmail = ref('');
+const messagerPhone = ref('');
+const messagerMSG = ref('');
+
+
+const submit = () => {
+    if(!checkName()){
+        console.log('contact true');
+    }else{
+        console.log(' contact false');
+    }
+
+    // if (checkName() && checkEmail() && checkPhone() && checkMSG()) {
+    //     alert('Đã gửi thành công!');
+    //     window.location.reload();
+    // }
+
+}
+
+// const checkName = () => {
+//     if (fullName.value.trim() === '') {
+//         messageName.value = 'Vui Lòng Nhập vào trường này';
+//         return false;
+//     } else {
+//         messageName.value = '';
+//         return true;
+//     }
+// }
+
+// const checkEmail = () => {
+//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     if (email.value.trim() === '') {
+//         messagerEmail.value = 'Vui lòng nhập vào trường này';
+//         return false;
+//     } else if (!emailRegex.test(email.value)) {
+//         messagerEmail.value = 'Vui lòng nhập đúng định dạng email'
+//         return false;
+//     } else {
+//         messagerEmail.value = '';
+//         return true;
+//     }
+// }
+
+// const checkPhone = () => {
+//     const phoneRegex = /(((\+|)84)|0)(3|5|7|8|9)+([0-9]{8})\b/;
+//     if (phone.value.trim() === '') {
+//         messagerPhone.value = 'Vui lòng nhập vào trường này';
+//         return false;
+//     } else if (!phoneRegex.test(phone.value)) {
+//         messagerPhone.value = 'Vui lòng nhập đúng định dạng phone'
+//         return false;
+//     } else {
+//         messagerPhone.value = '';
+//         return true;
+//     }
+
+// }
+
+// const checkMSG = () => {
+//     if (message.value.trim() === '') {
+//         messagerMSG.value = 'Vui Lòng Nhập vào trường này'
+//         return false;
+//     } else {
+//         messagerMSG.value = '';
+//         return true;
+//     }
+// }
+
 
 
 </script>
 
+
 <style scoped>
-.w-200{
+.color-p {
+    color: red;
+    font-size: 14px;
+    /* height: 20px; */
+}
+
+.w-200 {
     width: 200px;
 }
+
 .w-20 {
     width: 20px;
 }

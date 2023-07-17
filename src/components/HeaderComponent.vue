@@ -46,14 +46,17 @@
             </form>
             <div id="log_in">
                 <div class="user">
-                    <a href="">
-                        <img src="../assets/images/90e54b0a7a59948dd910ba50954c702e.png" alt="" height="30px">
-                    </a>
+                    <router-link to="/login">
+                        <img src="../assets/images/90e54b0a7a59948dd910ba50954c702e.png" alt="" >
+
+                    </router-link>
+                    
+                
                 </div>
                 <div class="cart">
-                    <a href="">
+                    
                         <img src="../assets/images/b80ad73e5e84aeb71c08e5d8d438eaa1.png" alt="" height="30px">
-                    </a>
+                   
                 </div>
             </div>
         </div>
@@ -69,6 +72,9 @@
 </script>
 
 <style  scoped>
+.cart img{
+    height: 30px;
+}
  .with-8{
     width: 8%;
  }
@@ -197,6 +203,12 @@ body {
     font-size: 15px;
 }
 
+#search_btn img{
+    height: 25px;
+}
+
+
+
 #search:hover #search_text,
 #search #search_text:valid {
     width: 150px;
@@ -210,6 +222,9 @@ body {
 
 .user {
     padding-right: 12px;
+}
+.user img{
+    height: 30px;
 }
 
 
